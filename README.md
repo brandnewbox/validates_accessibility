@@ -50,7 +50,7 @@ end
 Borrowed from `http://wave.webaim.org/api/docs?format=xml`
 
 | Key                  |      Title                               |  Summary                                                                                                            |
-|----------------------|:----------------------------------------:|--------------------------------------------------------------------------------------------------------------------:|
+|:--------------------:|:-----------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
 | alt_missing          | Missing alternative text                 | Image alternative text is not present.                                                                              |
 | alt_link_missing     | Linked image missing alternative text    | An image without alternative text results in an empty link.                                                         |
 | alt_spacer_missing   | Spacer image missing alternative text    | A layout spacer image (which should have null/empty alternative text) does not have an alt attribute.               |
