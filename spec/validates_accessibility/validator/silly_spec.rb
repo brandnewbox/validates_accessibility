@@ -1,6 +1,6 @@
 RSpec.describe ValidatesAccessibility::Validator, ":silly option" do
   before do
-    # Document.validates_accessibility_of :body
+    Document.validates_accessibility_of :body, except: [:alt_missing]
   end
 
   it "should be valid" do
