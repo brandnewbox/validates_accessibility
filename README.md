@@ -3,15 +3,15 @@
 * Source:  http://github.com/brandnewbox/validates_accessibility
 * Issues:  http://github.com/brandnewbox/validates_accessibility/issues
 
-== Description
+## Description
 
 We have a lot of projects that contractually require accessible content, this gem allows the application to validate user generated content and ensure that it meets those standards.
 
-== Features
+## Features
 
 * None as of yet.
 
-== Installation
+## Installation
 
   # in Gemfile
   gem 'validates_accessibility'
@@ -26,13 +26,13 @@ Then run
 This creates configuration initializer and locale files. In the initializer, there are a number of config
 options to customize the plugin.
 
-== Examples
+## Examples
 
 ```Ruby
 validates_accessibility :body
 ```
 
-== Usage
+## Usage
 
 To validate a model with a date, time or datetime attribute you just use the
 validation method
@@ -45,9 +45,9 @@ class Page < ActiveRecord::Base
 end
 ```
 
-== Configuration
+## Configuration
 
-=== Error Messages
+### Error Messages
 
 Using the I18n system to define new defaults:
 
@@ -57,13 +57,12 @@ Using the I18n system to define new defaults:
         invalid_heading: "is an invalid heading"
         missing_alt: "is missing alt text"
 
-== Contributors
+## Contributors
 
-== Maintainers
+## Maintainers
 
 * {Nathan Colgate}[http://github.com/nathancolgate]
 
+## License
 
-== License
-
-Copyright (c) 2008 Adam Meehan, released under the MIT license
+Copyright (c) 2017 Nathan Colgate, released under the MIT license
