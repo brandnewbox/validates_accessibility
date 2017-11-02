@@ -1,4 +1,4 @@
-# ValidatesTimeliness
+# ValidatesAccessibility
 
 * Source:  http://github.com/brandnewbox/validates_accessibility
 * Issues:  http://github.com/brandnewbox/validates_accessibility/issues

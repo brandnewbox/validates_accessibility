@@ -1,7 +1,5 @@
-RSpec.describe ValidatesAccessibility::Errors do
+RSpec.describe ValidatesAccessibility do
   
-  it 'should say hi' do
-    expect(ValidatesAccessibility::Errors::AltMissing.hi).to eq('Hi!') 
-  end
+  # Config type stuff goes in here
 
 end

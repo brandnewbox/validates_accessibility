@@ -1,0 +1,4 @@
+en:
+  errors:
+    messages:
+      alt_missing: "alt tag missing"
