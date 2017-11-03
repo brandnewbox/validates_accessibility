@@ -39,9 +39,9 @@ validation method
 
 ```Ruby
 class Page < ActiveRecord::Base
-  validates_accessibility :body, :heading_max => 3, :heading_min => 5
+  validates_accessibility :body, :heading_max => 3, :heading_min => 5, except: [:server_image_map]
   # or
-  validates :body, :validates_accessibility => {:heading_max => 3, :heading_min => 5}
+  validates :body, :validates_accessibility => {:heading_max => 3, :heading_min => 5, only: [:alt_missing]}
 end
 ```
 

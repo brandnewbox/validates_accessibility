@@ -1,12 +1,12 @@
 require 'active_model'
 require 'active_model/validator'
-require 'validates_accessibility/standards/alt_missing'
+require 'validates_accessibility/standards/twenty_two_a'
 
 module ValidatesAccessibility
   class Validator < ActiveModel::EachValidator
 
     STANDARDS = {
-      :alt_missing => ValidatesAccessibility::Standards::AltMissing
+      :twenty_two_a => ValidatesAccessibility::Standards::TwentyTwoA
     }.freeze
 
     def initialize(options)
@@ -21,8 +21,9 @@ module ValidatesAccessibility
     end
 
     def validate_each(record, attribute, value)
+      @doc = Nokogiri::HTML(value)
       @standards_to_check.each do |standard|
-        STANDARDS[standard].validate(record, attribute, value)
+        STANDARDS[standard].validate(record, attribute, @doc)
       end
     end
 
