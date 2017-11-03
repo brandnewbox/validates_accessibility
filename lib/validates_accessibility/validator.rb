@@ -1,12 +1,12 @@
 require 'active_model'
 require 'active_model/validator'
-require 'validates_accessibility/standards/twenty_two_a'
+require 'validates_accessibility/standards/a'
 
 module ValidatesAccessibility
   class Validator < ActiveModel::EachValidator
 
     STANDARDS = {
-      :twenty_two_a => ValidatesAccessibility::Standards::TwentyTwoA
+      :a => ValidatesAccessibility::Standards::A
     }.freeze
 
     def initialize(options)

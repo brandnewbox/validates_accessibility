@@ -1,6 +1,6 @@
 en:
   errors:
     messages:
-      alt_missing: "alt tag missing for %{element}"
-      alt_empty: "alt tag empty for %{element}"
-      descriptive_content_missing: "descriptive content missing in %{element}"
+      twenty_two_a_alt_missing: "alt tag missing for %{element}"
+      twenty_two_a_alt_empty: "alt tag empty for %{element}"
+      twenty_two_a_descriptive_content_missing: "descriptive content missing in %{element}"

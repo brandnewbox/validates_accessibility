@@ -16,17 +16,17 @@ RSpec.describe ValidatesAccessibility::Validator, "1194.22 (a) Standards" do
   # Note if adequate alternative text is contained within the element content.
   it "should not be valid if image alt attribute is not present" do
     d = Document.new
-    d.body = '<p><img src="cat.jpg" /></p>'
+    d.body = '<img />'
     expect(d).to be_invalid
   end
   it "should not be valid if image alt attribute is empty" do
     d = Document.new
-    d.body = '<p><img src="cat.jpg" alt="" /></p>'
+    d.body = '<img alt="" />'
     expect(d).to be_invalid
   end
   it "should be valid if image alt attribute is present" do
     d = Document.new
-    d.body = '<p><img src="cat.jpg" alt="a cat" /></p>'
+    d.body = '<img alt="a cat" />'
     expect(d).to be_valid
   end
 
@@ -34,8 +34,8 @@ RSpec.describe ValidatesAccessibility::Validator, "1194.22 (a) Standards" do
   # attribute). For each map, note if there is an "alt" text equivalent
   # provided for all active links. Note if adequate alternative text is
   # contained within the element content.
-  it "should not be valid if image magps do not have alt attributes"
-  it "should be valid if image magps do have alt attributes"
+  it "should not be valid if image maps do not have alt attributes"
+  it "should be valid if image maps do have alt attributes"
 
   # Search the HTML source for <APPLET> or <OBJECT> or <EMBED> tags. 
   # For each <applet> element, note if there is an "alt" attribute or nested
@@ -48,29 +48,29 @@ RSpec.describe ValidatesAccessibility::Validator, "1194.22 (a) Standards" do
   # the text equivalent.
   it "should not be valid if object does not have nested content" do
     d = Document.new
-    d.body = '<p><object width="400" height="400" data="helloworld.swf"></object></p>'
+    d.body = '<object></object>'
     expect(d).to be_invalid
   end
   it "should be valid if object does have nested content" do
     d = Document.new
-    d.body = '<p><object width="400" height="400" data="helloworld.swf">A Game of Darts</object></p>'
+    d.body = '<object>Hello World</object>'
     expect(d).to be_valid
   end
 
   # For each <embed> element, note if there is an "alt" attribute.
   it "should not be valid if embed alt attribute is not present" do
     d = Document.new
-    d.body = '<p><embed src="cat.jpg" /></p>'
+    d.body = '<embed />'
     expect(d).to be_invalid
   end
   it "should not be valid if embed alt attribute is empty" do
     d = Document.new
-    d.body = '<p><embed src="cat.jpg" alt="" /></p>'
+    d.body = '<embed alt="" />'
     expect(d).to be_invalid
   end
   it "should be valid if embed alt attribute is present" do
     d = Document.new
-    d.body = '<p><embed src="cat.jpg" alt="a cat" /></p>'
+    d.body = '<embed alt="a cat" />'
     expect(d).to be_valid
   end
 end
