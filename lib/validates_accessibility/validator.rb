@@ -2,8 +2,10 @@ require 'active_model'
 require 'active_model/validator'
 require 'validates_accessibility/standards/h35.rb'
 require 'validates_accessibility/standards/h37.rb'
+require 'validates_accessibility/standards/h46.rb'
 require 'validates_accessibility/standards/h53.rb'
 require 'validates_accessibility/standards/h65.rb'
+require 'validates_accessibility/standards/h96.rb'
 
 module ValidatesAccessibility
   class Validator < ActiveModel::EachValidator
@@ -11,8 +13,10 @@ module ValidatesAccessibility
     STANDARDS = {
       :h35 => ValidatesAccessibility::Standards::H35,
       :h37 => ValidatesAccessibility::Standards::H37,
+      :h46 => ValidatesAccessibility::Standards::H46,
       :h53 => ValidatesAccessibility::Standards::H53,
-      :h65 => ValidatesAccessibility::Standards::H65
+      :h65 => ValidatesAccessibility::Standards::H65,
+      :h96 => ValidatesAccessibility::Standards::H96
     }.freeze
 
     def initialize(options)

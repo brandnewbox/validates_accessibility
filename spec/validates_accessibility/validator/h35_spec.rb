@@ -1,4 +1,4 @@
-RSpec.describe ValidatesAccessibility::Validator, "1194.22 (a) Standards" do
+RSpec.describe ValidatesAccessibility::Validator, "WCAG H46 Standards" do
   before do
     Document.validates_accessibility_of :body
   end

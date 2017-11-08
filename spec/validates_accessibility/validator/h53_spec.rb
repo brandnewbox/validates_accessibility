@@ -1,4 +1,4 @@
-RSpec.describe ValidatesAccessibility::Validator, "1194.22 (a) Standards" do
+RSpec.describe ValidatesAccessibility::Validator, "WCAG H46 Standards" do
   before do
     Document.validates_accessibility_of :body
   end
@@ -19,17 +19,17 @@ RSpec.describe ValidatesAccessibility::Validator, "1194.22 (a) Standards" do
   # For each <embed> element, note if there is an "alt" attribute.
   it "should not be valid if embed alt attribute is not present" do
     d = Document.new
-    d.body = '<embed />'
+    d.body = '<embed /><noembed></noembed>'
     expect(d).to be_invalid
   end
   it "should not be valid if embed alt attribute is empty" do
     d = Document.new
-    d.body = '<embed alt="" />'
+    d.body = '<embed alt="" /><noembed></noembed>'
     expect(d).to be_invalid
   end
   it "should be valid if embed alt attribute is present" do
     d = Document.new
-    d.body = '<embed alt="a cat" />'
+    d.body = '<embed alt="a cat" /><noembed></noembed>'
     expect(d).to be_valid
   end
 end

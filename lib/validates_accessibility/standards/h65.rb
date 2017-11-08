@@ -4,26 +4,17 @@ module ValidatesAccessibility
       def self.validate(record, attribute, doc)
         elements = Array.new
         doc.css("input").each do |input|
-          if input.parent.detect {|c| !c.is_a?(Nokogiri::XML::Label)}
-            return
+          if input.parent.name == 'label'
+            return # valid option
+          elsif doc.css("label[for='#{input["id"]}']").any?
+            return # valid option
+          elsif input['title']
+            return # valid option
           else
-            if doc.css("label[for='#{input["id"]}']").any?
-              return
-            else
-              elements.push(input)
-          end
-        end
-
-        elements.each do |element|
-          doc.css("#{element}[title='']").each do |element|
-            record.errors.add(attribute,:a_title_empty, element: element.to_html)
-          end
-          doc.css("#{element}:not([title])").each do |element|
-            record.errors.add(attribute,:a_title_missing, element: element.to_html)
+            record.errors.add(attribute,:a_title_empty, input: input.to_html)
           end
         end
       end
     end
   end
-end
 end
