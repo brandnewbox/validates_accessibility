@@ -1,5 +1,10 @@
 require 'active_model'
 require 'active_model/validator'
+require 'validates_accessibility/standards/h24.rb'
+require 'validates_accessibility/standards/h25.rb'
+require 'validates_accessibility/standards/h28.rb'
+require 'validates_accessibility/standards/h30.rb'
+require 'validates_accessibility/standards/h32.rb'
 require 'validates_accessibility/standards/h35.rb'
 require 'validates_accessibility/standards/h37.rb'
 require 'validates_accessibility/standards/h39.rb'
@@ -13,6 +18,11 @@ module ValidatesAccessibility
   class Validator < ActiveModel::EachValidator
 
     STANDARDS = {
+      :h24 => ValidatesAccessibility::Standards::H24,
+      :h25 => ValidatesAccessibility::Standards::H25,
+      :h28 => ValidatesAccessibility::Standards::H28,
+      :h30 => ValidatesAccessibility::Standards::H30,
+      :h32 => ValidatesAccessibility::Standards::H32,
       :h35 => ValidatesAccessibility::Standards::H35,
       :h37 => ValidatesAccessibility::Standards::H37,
       :h39 => ValidatesAccessibility::Standards::H39,

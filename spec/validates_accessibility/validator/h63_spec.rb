@@ -24,7 +24,7 @@ RSpec.describe ValidatesAccessibility::Validator, "WCAG H63 Standards" do
               <tr><th scope="rowgroup"></th></tr>
               <tr><th scope="colgroup"></th></tr>
               </table>'
-    expect(d).to be_valid
+    expect(d).to be_invalid
   end
 
   it "should not be valid if all th's in a table do not have a scope attribute" do
@@ -35,7 +35,7 @@ RSpec.describe ValidatesAccessibility::Validator, "WCAG H63 Standards" do
               <tr><th scope="rowgroup"></th></tr>
               <tr><th scope="colgroup"></th></tr>
               </table>'
-    expect(d).to be_valid
+    expect(d).to be_invalid
   end
 
 end
