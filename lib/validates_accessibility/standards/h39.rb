@@ -4,7 +4,8 @@ module ValidatesAccessibility
       def self.validate(record, attribute, doc)
         elements = Array.new
         doc.css("table").each do |table|
-          if !table.children.detect {|c| c.name == 'caption' && c.is_a?(Nokogiri::XML::Text)}
+          if !table.children.detect {|c| c.children[0].is_a?(Nokogiri::XML::Text) && c.name = 'caption'}
+            record.errors.add(attribute,:a_table_caption_missing, table: table.to_html)
           end
         end
       end

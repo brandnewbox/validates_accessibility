@@ -5,6 +5,7 @@ require 'validates_accessibility/standards/h37.rb'
 require 'validates_accessibility/standards/h39.rb'
 require 'validates_accessibility/standards/h46.rb'
 require 'validates_accessibility/standards/h53.rb'
+require 'validates_accessibility/standards/h63.rb'
 require 'validates_accessibility/standards/h65.rb'
 require 'validates_accessibility/standards/h96.rb'
 
@@ -14,9 +15,10 @@ module ValidatesAccessibility
     STANDARDS = {
       :h35 => ValidatesAccessibility::Standards::H35,
       :h37 => ValidatesAccessibility::Standards::H37,
-      :h37 => ValidatesAccessibility::Standards::H39,
+      :h39 => ValidatesAccessibility::Standards::H39,
       :h46 => ValidatesAccessibility::Standards::H46,
       :h53 => ValidatesAccessibility::Standards::H53,
+      :h63 => ValidatesAccessibility::Standards::H63,
       :h65 => ValidatesAccessibility::Standards::H65,
       :h96 => ValidatesAccessibility::Standards::H96
     }.freeze
