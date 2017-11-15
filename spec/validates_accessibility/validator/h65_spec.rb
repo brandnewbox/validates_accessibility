@@ -1,6 +1,6 @@
 RSpec.describe ValidatesAccessibility::Validator, "WCAG H65 Standards" do
   before do
-    Document.validates_accessibility_of :body
+    Document.validates_accessibility_of :body, only: [:h65]
   end
 
   # For each <object> element, note if there is nested content which provides

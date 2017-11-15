@@ -9,7 +9,6 @@ RSpec.describe ValidatesAccessibility::Validator, "WCAG H32 Standards" do
     d = Document.new
     d.body = "<form><input type='submit'/></form>"
     d.valid?
-    puts d.errors.inspect
     expect(d).to be_valid
   end
 

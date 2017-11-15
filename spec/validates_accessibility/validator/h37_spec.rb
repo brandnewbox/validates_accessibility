@@ -1,6 +1,6 @@
 RSpec.describe ValidatesAccessibility::Validator, "WCAG H37 Standards" do
   before do
-    Document.validates_accessibility_of :body
+    Document.validates_accessibility_of :body, only: [:h37]
   end
 
   # A text equivalent for every non-text element shall be provided (e.g., via

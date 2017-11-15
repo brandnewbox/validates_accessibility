@@ -1,6 +1,6 @@
 RSpec.describe ValidatesAccessibility::Validator, "WCAG H35 Standards" do
   before do
-    Document.validates_accessibility_of :body
+    Document.validates_accessibility_of :body, only: [:h35]
   end
 
   # Search the HTML source for <APPLET> or <OBJECT> or <EMBED> tags. 

@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version     = ValidatesAccessibility::VERSION
   spec.date        = '2017-11-01'
   spec.description = "We have a lot of projects that contractually require accessible content, this gem allows the application to validate user generated content and ensure that it meets those standards."
-  spec.authors     = ["Nathan Clark"]
+  spec.authors     = ["Nathan Clark", "Mark VanLandingham"]
   spec.email       = 'nathan@brandnewbox.com'
 
   spec.summary     = "Ruby gem to validate the accessibility of HTML content"
