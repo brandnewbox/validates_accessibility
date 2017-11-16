@@ -6,12 +6,14 @@ RSpec.describe ValidatesAccessibility::Validator, "Plugin" do
     Document.validates_accessibility_of :body
   end
 
-  it "Testing outside website" do
-    source = Net::HTTP.get('markvanlan.com', '/index.html').to_s
+  it "Testing accessiblity of "+ ENV['URL'] do
+    source = Net::HTTP.get(ENV['URL'], '/index.html').to_s
     c = Document.new
     c.body = source
-    # puts c.inspect
     expect(c).to be_invalid
+    c.errors.messages[:body].each do |message|
+      puts message
+    end
   end
 
 

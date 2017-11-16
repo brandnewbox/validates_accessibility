@@ -8,7 +8,7 @@ module ValidatesAccessibility
           elsif element.children && element.children.detect {|c| c.name == 'noembed'}
             #valid option
           else
-            record.errors.add(attribute,:a_noembed_missing, element: element.to_html)
+            record.errors.add(attribute,:H46_noembed_missing, element: element.to_html)
           end
         end
       end

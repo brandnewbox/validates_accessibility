@@ -11,7 +11,7 @@ module ValidatesAccessibility
             return # Valid option
 
           else
-            record.errors.add(attribute,:a_link_content_missing, link: link.to_html)
+            record.errors.add(attribute,:H30_link_content_missing, link: link.to_html)
           end
         end
       end

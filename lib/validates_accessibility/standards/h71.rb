@@ -7,7 +7,7 @@ module ValidatesAccessibility
           fieldsets += 1
         end
         if fieldsets < 1
-          record.errors.add(attribute,:fieldset_missing)
+          record.errors.add(attribute,:H71_fieldset_missing)
         end
       end
     end

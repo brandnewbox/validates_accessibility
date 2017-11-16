@@ -6,7 +6,7 @@ module ValidatesAccessibility
           if form.children.detect {|c| c.name == "input" && c['type'] == 'submit'}  || form.children.detect {|c| c.name == "button" && c['type'] == 'submit'}
             return # valid option
           else
-            record.errors.add(attribute,:a_form_submit_missing, form: form.to_html)
+            record.errors.add(attribute,:H32_form_submit_missing, form: form.to_html)
           end
         end
       end

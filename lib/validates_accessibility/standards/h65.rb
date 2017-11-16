@@ -11,7 +11,7 @@ module ValidatesAccessibility
           elsif input['title']
             return # valid option
           else
-            record.errors.add(attribute,:a_title_empty, input: input.to_html)
+            record.errors.add(attribute,:H65_title_empty, input: input.to_html)
           end
         end
       end

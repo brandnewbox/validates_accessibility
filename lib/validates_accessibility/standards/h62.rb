@@ -25,7 +25,7 @@ module ValidatesAccessibility
             end
           end
           if rbs != rts || rps < 1
-            record.errors.add(attribute,:a_ruby_tag_error, ruby: ruby.to_html) 
+            record.errors.add(attribute,:H62_ruby_tag_error, ruby: ruby.to_html) 
           end
         end
       end

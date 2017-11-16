@@ -32,7 +32,7 @@ module ValidatesAccessibility
             return # has at least 1 header
           end
         end
-        record.errors.add(attribute,:a_content_header_missing)
+        record.errors.add(attribute,:H69_content_header_missing)
       end
     end
   end

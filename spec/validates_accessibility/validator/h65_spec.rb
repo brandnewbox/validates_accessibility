@@ -28,4 +28,5 @@ RSpec.describe ValidatesAccessibility::Validator, "WCAG H65 Standards" do
     d.body = '<input title="a cat">'
     expect(d).to be_valid
   end
+
 end

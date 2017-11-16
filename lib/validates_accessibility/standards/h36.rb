@@ -7,7 +7,7 @@ module ValidatesAccessibility
           if input['type'] == 'image' && input['alt'] != nil && input['alt'] != ''
             return #valid option
           elsif input['type'] == 'image' && (input['alt'] == nil || input['alt'] == '')
-            record.errors.add(attribute,:a_input_type_image_alt_missing, input: input.to_html) 
+            record.errors.add(attribute,:H36_input_type_image_alt_missing, input: input.to_html) 
           else
             return # does not have type image
           end
