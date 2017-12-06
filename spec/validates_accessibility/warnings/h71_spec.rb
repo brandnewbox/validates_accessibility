@@ -1,4 +1,4 @@
-RSpec.describe ValidatesAccessibility::Validator, "WCAG H71 Standards" do
+RSpec.describe WarningValidator::Validator, "WCAG H71 Standards" do
   before do
     Document.validates_accessibility_of :body, only: [:h71]
   end

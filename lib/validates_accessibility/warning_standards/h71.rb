@@ -1,4 +1,4 @@
-module ValidatesAccessibility
+module WarningValidator
   module Standards
     class H71
       def self.validate(record, attribute, doc)

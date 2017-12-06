@@ -13,8 +13,13 @@ module ValidatesAccessibility
   autoload :VERSION, 'validates_accessibility/version'
 end
 
+module Warnings
+  autoload :VERSION, 'validates_accessibility/version'
+end
+
 # require 'validates_accessibility/conversion'
 require 'validates_accessibility/validator'
+require 'validates_accessibility/warning_validator'
 require 'validates_accessibility/helper_methods'
 # require 'validates_accessibility/attribute_methods'
 # require 'validates_accessibility/extensions'
